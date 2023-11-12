@@ -24,7 +24,7 @@
    <div id="projectname">RWA2-21
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Source code for the</div>
+   <div id="projectbrief">Source code for OOPs RWA2.</div>
   </td>
  </tr>
  </tbody>
@@ -88,29 +88,26 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> brake();    </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_r_w_a2_1_1_wheeled_robot.html#a73287c1822f2c0914a0f2b1f82318bc0">   46</a></span>&#160;        <a class="code" href="class_r_w_a2_1_1_wheeled_robot.html#a73287c1822f2c0914a0f2b1f82318bc0">WheeledRobot</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> orientation, <span class="keywordtype">double</span> wheel_diameter,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::string battery_model, <span class="keywordtype">int</span> current_charge,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::string sensor_model,  <span class="keywordtype">double</span> desired_speed, <span class="keywordtype">int</span> number_of_wheels = 2 , <span class="keywordtype">double</span> speed = 0.0): </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        number_of_wheels_{number_of_wheels},</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        wheel_diameter_{wheel_diameter}, </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        desired_speed_{desired_speed},</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_r_w_a2_1_1_mobile_robot.html#a8a51c1502ec29797bb30a3a9e02eaf31">MobileRobot</a>(x, y, orientation, battery_model, current_charge, sensor_model, speed){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_wheeled_robot.html#a8094be3d85ddd0c0fc626c2eb2f0320c">move</a>(<span class="keywordtype">double</span> distance, <span class="keywordtype">double</span> angle) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_wheeled_robot.html#ad7f27c869d62676c207f4045f8f31672">print_status</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_r_w_a2_1_1_wheeled_robot.html#abc840cda4a0ef5382a0d0a3f53c86200">   47</a></span>&#160;        <a class="code" href="class_r_w_a2_1_1_wheeled_robot.html#abc840cda4a0ef5382a0d0a3f53c86200">WheeledRobot</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> orientation, std::string model,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::string battery_model, <span class="keywordtype">int</span> current_charge, std::string sensor_model,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">double</span> wheel_diameter, <span class="keywordtype">double</span> desired_speed, <span class="keywordtype">int</span> number_of_wheels = 2 , <span class="keywordtype">double</span> speed = 0.0): </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_r_w_a2_1_1_mobile_robot.html">MobileRobot</a>(x, y, orientation, model, battery_model, current_charge, sensor_model, speed),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        number_of_wheels_{number_of_wheels},</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        wheel_diameter_{wheel_diameter}, </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        desired_speed_{desired_speed}{}<span class="comment">//end of cotr.</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_wheeled_robot.html#a8094be3d85ddd0c0fc626c2eb2f0320c">move</a>(<span class="keywordtype">double</span> distance, <span class="keywordtype">double</span> angle) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_wheeled_robot.html#ad7f27c869d62676c207f4045f8f31672">print_status</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};<span class="comment">//class wheeled robot.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}<span class="comment">//namespace RWA2</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_r_w_a2_1_1_mobile_robot_html_a8a51c1502ec29797bb30a3a9e02eaf31"><div class="ttname"><a href="class_r_w_a2_1_1_mobile_robot.html#a8a51c1502ec29797bb30a3a9e02eaf31">RWA2::MobileRobot::MobileRobot</a></div><div class="ttdeci">MobileRobot(double x, double y, double orientation, std::string battery_model, int current_charge, std::string sensor_model, double speed=0.0)</div><div class="ttdoc">Construct a new Mobile Robot object This method is used to initalize the values for the mobile robot.</div><div class="ttdef"><b>Definition:</b> mobile_robot.h:40</div></div>
+<div class="ttc" id="aclass_r_w_a2_1_1_wheeled_robot_html_abc840cda4a0ef5382a0d0a3f53c86200"><div class="ttname"><a href="class_r_w_a2_1_1_wheeled_robot.html#abc840cda4a0ef5382a0d0a3f53c86200">RWA2::WheeledRobot::WheeledRobot</a></div><div class="ttdeci">WheeledRobot(double x, double y, double orientation, std::string model, std::string battery_model, int current_charge, std::string sensor_model, double wheel_diameter, double desired_speed, int number_of_wheels=2, double speed=0.0)</div><div class="ttdoc">Construct a new Wheeled Robot object.</div><div class="ttdef"><b>Definition:</b> wheeled_robot.h:47</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_wheeled_robot_html"><div class="ttname"><a href="class_r_w_a2_1_1_wheeled_robot.html">RWA2::WheeledRobot</a></div><div class="ttdef"><b>Definition:</b> wheeled_robot.h:5</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_wheeled_robot_html_ad7f27c869d62676c207f4045f8f31672"><div class="ttname"><a href="class_r_w_a2_1_1_wheeled_robot.html#ad7f27c869d62676c207f4045f8f31672">RWA2::WheeledRobot::print_status</a></div><div class="ttdeci">virtual void print_status() override</div><div class="ttdoc">The overridden method to print the status of the Wheeled robot.</div><div class="ttdef"><b>Definition:</b> wheeled_robot.cpp:39</div></div>
-<div class="ttc" id="aclass_r_w_a2_1_1_wheeled_robot_html_a73287c1822f2c0914a0f2b1f82318bc0"><div class="ttname"><a href="class_r_w_a2_1_1_wheeled_robot.html#a73287c1822f2c0914a0f2b1f82318bc0">RWA2::WheeledRobot::WheeledRobot</a></div><div class="ttdeci">WheeledRobot(double x, double y, double orientation, double wheel_diameter, std::string battery_model, int current_charge, std::string sensor_model, double desired_speed, int number_of_wheels=2, double speed=0.0)</div><div class="ttdoc">Construct a new Wheeled Robot object.</div><div class="ttdef"><b>Definition:</b> wheeled_robot.h:46</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_wheeled_robot_html_a8094be3d85ddd0c0fc626c2eb2f0320c"><div class="ttname"><a href="class_r_w_a2_1_1_wheeled_robot.html#a8094be3d85ddd0c0fc626c2eb2f0320c">RWA2::WheeledRobot::move</a></div><div class="ttdeci">virtual void move(double distance, double angle) override</div><div class="ttdoc">The overridden method to move the Wheeled robot.</div><div class="ttdef"><b>Definition:</b> wheeled_robot.cpp:49</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_mobile_robot_html"><div class="ttname"><a href="class_r_w_a2_1_1_mobile_robot.html">RWA2::MobileRobot</a></div><div class="ttdef"><b>Definition:</b> mobile_robot.h:11</div></div>
 <!-- start footer part -->

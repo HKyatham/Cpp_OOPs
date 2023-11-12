@@ -24,7 +24,7 @@
    <div id="projectname">RWA2-21
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Source code for the</div>
+   <div id="projectbrief">Source code for OOPs RWA2.</div>
   </td>
  </tr>
  </tbody>
@@ -100,9 +100,9 @@ Collaboration diagram for RWA2::MobileRobot:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8a51c1502ec29797bb30a3a9e02eaf31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_w_a2_1_1_mobile_robot.html#a8a51c1502ec29797bb30a3a9e02eaf31">MobileRobot</a> (double x, double y, double orientation, std::string battery_model, int current_charge, std::string sensor_model, double speed=0.0)</td></tr>
-<tr class="memdesc:a8a51c1502ec29797bb30a3a9e02eaf31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Mobile Robot object This method is used to initalize the values for the mobile robot.  <a href="class_r_w_a2_1_1_mobile_robot.html#a8a51c1502ec29797bb30a3a9e02eaf31">More...</a><br /></td></tr>
-<tr class="separator:a8a51c1502ec29797bb30a3a9e02eaf31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a240374ba1915cc52283a7a3d9c59ea0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_w_a2_1_1_mobile_robot.html#a240374ba1915cc52283a7a3d9c59ea0c">MobileRobot</a> (double x, double y, double orientation, std::string model, std::string battery_model, int current_charge, std::string sensor_model, double speed=0.0)</td></tr>
+<tr class="memdesc:a240374ba1915cc52283a7a3d9c59ea0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Mobile Robot object This method is used to initalize the values for the mobile robot.  <a href="class_r_w_a2_1_1_mobile_robot.html#a240374ba1915cc52283a7a3d9c59ea0c">More...</a><br /></td></tr>
+<tr class="separator:a240374ba1915cc52283a7a3d9c59ea0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26473718b39fe26ad31f7588cdfdcd27"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_w_a2_1_1_mobile_robot.html#a26473718b39fe26ad31f7588cdfdcd27">move</a> (double distance, double angle)=0</td></tr>
 <tr class="memdesc:a26473718b39fe26ad31f7588cdfdcd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">This virtual method is used to move the robot by a specified distance and angle.  <a href="class_r_w_a2_1_1_mobile_robot.html#a26473718b39fe26ad31f7588cdfdcd27">More...</a><br /></td></tr>
 <tr class="separator:a26473718b39fe26ad31f7588cdfdcd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,8 +138,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>model_</b></td
 <tr class="separator:a9279e49661eed20398b40437f983d5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8a51c1502ec29797bb30a3a9e02eaf31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a51c1502ec29797bb30a3a9e02eaf31">&#9670;&nbsp;</a></span>MobileRobot()</h2>
+<a id="a240374ba1915cc52283a7a3d9c59ea0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a240374ba1915cc52283a7a3d9c59ea0c">&#9670;&nbsp;</a></span>MobileRobot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,6 +164,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>model_</b></td
           <td></td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -208,6 +214,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>model_</b></td
     <tr><td class="paramname">x</td><td>x coordinate value of the position. </td></tr>
     <tr><td class="paramname">y</td><td>y coordinate value of the position. </td></tr>
     <tr><td class="paramname">orientation</td><td>orientation of the robot. </td></tr>
+    <tr><td class="paramname">model</td><td>model of the robot. </td></tr>
     <tr><td class="paramname">battery_model</td><td>battery model attached to the robot. </td></tr>
     <tr><td class="paramname">current_charge</td><td>current charge of the battery. </td></tr>
     <tr><td class="paramname">sensor_model</td><td>sensor model attached to the robot. </td></tr>
@@ -298,9 +305,9 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_r_w_a2_1_1_mobile_robot_a355a94c1602869459370267bc0c0915c_icgraph.png" border="0" usemap="#class_r_w_a2_1_1_mobile_robot_a355a94c1602869459370267bc0c0915c_icgraph" alt=""/></div>
 <map name="class_r_w_a2_1_1_mobile_robot_a355a94c1602869459370267bc0c0915c_icgraph" id="class_r_w_a2_1_1_mobile_robot_a355a94c1602869459370267bc0c0915c_icgraph">
 <area shape="rect" title="This method is used to print the status i.e. the orientation and position of the robot." alt="" coords="217,104,376,145"/>
-<area shape="rect" href="class_r_w_a2_1_1_aerial_robot.html#ae738b1a11c43e8d19f4b447e38e26e22" title="The overridden method to print the status of the aerial robot." alt="" coords="11,5,164,47"/>
+<area shape="rect" href="class_r_w_a2_1_1_legged_robot.html#a3f30239eb0fdeade58f8cf4ce510a6ee" title="The overridden method to print the status of the Legged robot." alt="" coords="6,5,169,47"/>
 <area shape="rect" href="class_r_w_a2_1_1_aquatic_robot.html#a3d5b7fbcb1867ee3d5925ad673efffd3" title="The overridden method to print the status of the aquatic robot." alt="" coords="9,71,165,112"/>
-<area shape="rect" href="class_r_w_a2_1_1_legged_robot.html#a3f30239eb0fdeade58f8cf4ce510a6ee" title="The overridden method to print the status of the Legged robot." alt="" coords="6,136,169,177"/>
+<area shape="rect" href="class_r_w_a2_1_1_aerial_robot.html#ae738b1a11c43e8d19f4b447e38e26e22" title="The overridden method to print the status of the aerial robot." alt="" coords="11,136,164,177"/>
 <area shape="rect" href="class_r_w_a2_1_1_wheeled_robot.html#ad7f27c869d62676c207f4045f8f31672" title="The overridden method to print the status of the Wheeled robot." alt="" coords="5,201,169,243"/>
 </map>
 </div>

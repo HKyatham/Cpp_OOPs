@@ -24,7 +24,7 @@
    <div id="projectname">RWA2-21
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Source code for the</div>
+   <div id="projectbrief">Source code for OOPs RWA2.</div>
   </td>
  </tr>
  </tbody>
@@ -86,29 +86,29 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> surface();    </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_r_w_a2_1_1_aquatic_robot.html#a706e58e743d2460cdf5e2a414abab06f">   39</a></span>&#160;        <a class="code" href="class_r_w_a2_1_1_aquatic_robot.html#a706e58e743d2460cdf5e2a414abab06f">AquaticRobot</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> orientation, <span class="keywordtype">bool</span> has_fins,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::string battery_model, <span class="keywordtype">int</span> current_charge, std::string sensor_model, </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">double</span> depth = 0.0, <span class="keywordtype">bool</span> is_diving = <span class="keyword">false</span>, <span class="keywordtype">double</span> speed = 0.0): </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_r_w_a2_1_1_mobile_robot.html">MobileRobot</a>(x, y, orientation, battery_model, current_charge, sensor_model, speed), </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        has_fins_{has_fins}, </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        depth_{depth},</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        is_diving_{is_diving}{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_aquatic_robot.html#a1bb8749d0604799f1b6095bb69530673">move</a>(<span class="keywordtype">double</span> distance, <span class="keywordtype">double</span> angle) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_aquatic_robot.html#a3d5b7fbcb1867ee3d5925ad673efffd3">print_status</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_r_w_a2_1_1_aquatic_robot.html#a73ede53b5adf5cfb883c513d7b779c29">   40</a></span>&#160;        <a class="code" href="class_r_w_a2_1_1_aquatic_robot.html#a73ede53b5adf5cfb883c513d7b779c29">AquaticRobot</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> orientation, std::string model,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        std::string battery_model, <span class="keywordtype">int</span> current_charge, std::string sensor_model, </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">bool</span> has_fins, <span class="keywordtype">double</span> depth = 0.0, <span class="keywordtype">bool</span> is_diving = <span class="keyword">false</span>, <span class="keywordtype">double</span> speed = 0.0): </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="class_r_w_a2_1_1_mobile_robot.html">MobileRobot</a>(x, y, orientation, model, battery_model, current_charge, sensor_model, speed), </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        has_fins_{has_fins}, </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        depth_{depth},</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        is_diving_{is_diving}{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }<span class="comment">//end of cotr</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_aquatic_robot.html#a1bb8749d0604799f1b6095bb69530673">move</a>(<span class="keywordtype">double</span> distance, <span class="keywordtype">double</span> angle) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_aquatic_robot.html#a3d5b7fbcb1867ee3d5925ad673efffd3">print_status</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};<span class="comment">//class aquatic robot</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}<span class="comment">//namespace RWA2</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_r_w_a2_1_1_aquatic_robot_html"><div class="ttname"><a href="class_r_w_a2_1_1_aquatic_robot.html">RWA2::AquaticRobot</a></div><div class="ttdef"><b>Definition:</b> aquatic_robot.h:5</div></div>
-<div class="ttc" id="aclass_r_w_a2_1_1_aquatic_robot_html_a706e58e743d2460cdf5e2a414abab06f"><div class="ttname"><a href="class_r_w_a2_1_1_aquatic_robot.html#a706e58e743d2460cdf5e2a414abab06f">RWA2::AquaticRobot::AquaticRobot</a></div><div class="ttdeci">AquaticRobot(double x, double y, double orientation, bool has_fins, std::string battery_model, int current_charge, std::string sensor_model, double depth=0.0, bool is_diving=false, double speed=0.0)</div><div class="ttdoc">Construct a new Aquatic Robot object.</div><div class="ttdef"><b>Definition:</b> aquatic_robot.h:39</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_aquatic_robot_html_a3d5b7fbcb1867ee3d5925ad673efffd3"><div class="ttname"><a href="class_r_w_a2_1_1_aquatic_robot.html#a3d5b7fbcb1867ee3d5925ad673efffd3">RWA2::AquaticRobot::print_status</a></div><div class="ttdeci">virtual void print_status() override</div><div class="ttdoc">The overridden method to print the status of the aquatic robot.</div><div class="ttdef"><b>Definition:</b> aquatic_robot.cpp:50</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_aquatic_robot_html_a1bb8749d0604799f1b6095bb69530673"><div class="ttname"><a href="class_r_w_a2_1_1_aquatic_robot.html#a1bb8749d0604799f1b6095bb69530673">RWA2::AquaticRobot::move</a></div><div class="ttdeci">virtual void move(double distance, double angle) override</div><div class="ttdoc">The overridden method to move the aquatic robot.</div><div class="ttdef"><b>Definition:</b> aquatic_robot.cpp:60</div></div>
+<div class="ttc" id="aclass_r_w_a2_1_1_aquatic_robot_html_a73ede53b5adf5cfb883c513d7b779c29"><div class="ttname"><a href="class_r_w_a2_1_1_aquatic_robot.html#a73ede53b5adf5cfb883c513d7b779c29">RWA2::AquaticRobot::AquaticRobot</a></div><div class="ttdeci">AquaticRobot(double x, double y, double orientation, std::string model, std::string battery_model, int current_charge, std::string sensor_model, bool has_fins, double depth=0.0, bool is_diving=false, double speed=0.0)</div><div class="ttdoc">Construct a new Aquatic Robot object.</div><div class="ttdef"><b>Definition:</b> aquatic_robot.h:40</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_mobile_robot_html"><div class="ttname"><a href="class_r_w_a2_1_1_mobile_robot.html">RWA2::MobileRobot</a></div><div class="ttdef"><b>Definition:</b> mobile_robot.h:11</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

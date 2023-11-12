@@ -24,7 +24,7 @@
    <div id="projectname">RWA2-21
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Source code for the</div>
+   <div id="projectbrief">Source code for OOPs RWA2.</div>
   </td>
  </tr>
  </tbody>
@@ -94,23 +94,23 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_mobile_robot.html#ac3137f5b21c73796c10ebaffe2edf8d6">rotate</a>(<span class="keywordtype">double</span> angle);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_r_w_a2_1_1_mobile_robot.html#a8a51c1502ec29797bb30a3a9e02eaf31">   40</a></span>&#160;  <a class="code" href="class_r_w_a2_1_1_mobile_robot.html#a8a51c1502ec29797bb30a3a9e02eaf31">MobileRobot</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> orientation, std::string battery_model, <span class="keywordtype">int</span> current_charge, std::string sensor_model, <span class="keywordtype">double</span> speed = 0.0)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      : position_{x, y}, orientation_{orientation}, battery_(battery_model, current_charge), speed_{speed} {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    sensors_ = std::make_unique&lt;RWA2::Sensor&gt;(sensor_model);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_mobile_robot.html#a26473718b39fe26ad31f7588cdfdcd27">move</a>(<span class="keywordtype">double</span> distance, <span class="keywordtype">double</span> angle) = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_mobile_robot.html#a355a94c1602869459370267bc0c0915c">print_status</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};  <span class="comment">// class MobileRobot</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}  <span class="comment">// namespace RWA2</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_r_w_a2_1_1_mobile_robot.html#a240374ba1915cc52283a7a3d9c59ea0c">   41</a></span>&#160;  <a class="code" href="class_r_w_a2_1_1_mobile_robot.html#a240374ba1915cc52283a7a3d9c59ea0c">MobileRobot</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> orientation, std::string model, std::string battery_model, <span class="keywordtype">int</span> current_charge, std::string sensor_model, <span class="keywordtype">double</span> speed = 0.0)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      : position_{x, y}, orientation_{orientation}, speed_{speed}, battery_(battery_model, current_charge), model_{model} {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    sensors_ = std::make_unique&lt;RWA2::Sensor&gt;(sensor_model);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }<span class="comment">//end of cotr.</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_mobile_robot.html#a26473718b39fe26ad31f7588cdfdcd27">move</a>(<span class="keywordtype">double</span> distance, <span class="keywordtype">double</span> angle) = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_r_w_a2_1_1_mobile_robot.html#a355a94c1602869459370267bc0c0915c">print_status</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};  <span class="comment">// class MobileRobot</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}  <span class="comment">// namespace RWA2</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_r_w_a2_1_1_battery_html"><div class="ttname"><a href="class_r_w_a2_1_1_battery.html">RWA2::Battery</a></div><div class="ttdef"><b>Definition:</b> battery.h:4</div></div>
-<div class="ttc" id="aclass_r_w_a2_1_1_mobile_robot_html_a8a51c1502ec29797bb30a3a9e02eaf31"><div class="ttname"><a href="class_r_w_a2_1_1_mobile_robot.html#a8a51c1502ec29797bb30a3a9e02eaf31">RWA2::MobileRobot::MobileRobot</a></div><div class="ttdeci">MobileRobot(double x, double y, double orientation, std::string battery_model, int current_charge, std::string sensor_model, double speed=0.0)</div><div class="ttdoc">Construct a new Mobile Robot object This method is used to initalize the values for the mobile robot.</div><div class="ttdef"><b>Definition:</b> mobile_robot.h:40</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_mobile_robot_html_a355a94c1602869459370267bc0c0915c"><div class="ttname"><a href="class_r_w_a2_1_1_mobile_robot.html#a355a94c1602869459370267bc0c0915c">RWA2::MobileRobot::print_status</a></div><div class="ttdeci">virtual void print_status()</div><div class="ttdoc">This method is used to print the status i.e. the orientation and position of the robot.</div><div class="ttdef"><b>Definition:</b> mobile_robot.cpp:10</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_mobile_robot_html_ac3137f5b21c73796c10ebaffe2edf8d6"><div class="ttname"><a href="class_r_w_a2_1_1_mobile_robot.html#ac3137f5b21c73796c10ebaffe2edf8d6">RWA2::MobileRobot::rotate</a></div><div class="ttdeci">void rotate(double angle)</div><div class="ttdoc">This method is used to rotate the robot by the specified angle.</div><div class="ttdef"><b>Definition:</b> mobile_robot.cpp:3</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_mobile_robot_html_a26473718b39fe26ad31f7588cdfdcd27"><div class="ttname"><a href="class_r_w_a2_1_1_mobile_robot.html#a26473718b39fe26ad31f7588cdfdcd27">RWA2::MobileRobot::move</a></div><div class="ttdeci">virtual void move(double distance, double angle)=0</div><div class="ttdoc">This virtual method is used to move the robot by a specified distance and angle.</div></div>
+<div class="ttc" id="aclass_r_w_a2_1_1_mobile_robot_html_a240374ba1915cc52283a7a3d9c59ea0c"><div class="ttname"><a href="class_r_w_a2_1_1_mobile_robot.html#a240374ba1915cc52283a7a3d9c59ea0c">RWA2::MobileRobot::MobileRobot</a></div><div class="ttdeci">MobileRobot(double x, double y, double orientation, std::string model, std::string battery_model, int current_charge, std::string sensor_model, double speed=0.0)</div><div class="ttdoc">Construct a new Mobile Robot object This method is used to initalize the values for the mobile robot.</div><div class="ttdef"><b>Definition:</b> mobile_robot.h:41</div></div>
 <div class="ttc" id="aclass_r_w_a2_1_1_mobile_robot_html"><div class="ttname"><a href="class_r_w_a2_1_1_mobile_robot.html">RWA2::MobileRobot</a></div><div class="ttdef"><b>Definition:</b> mobile_robot.h:11</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
