@@ -32,15 +32,16 @@ class MobileRobot {
   * @param x x coordinate value of the position.
   * @param y y coordinate value of the position.
   * @param orientation orientation of the robot.
+  * @param model model of the robot.
   * @param battery_model battery model attached to the robot.
   * @param current_charge current charge of the battery.
   * @param sensor_model sensor model attached to the robot.
   * @param speed speed with which the robot moves.
   */
-  MobileRobot(double x, double y, double orientation, std::string battery_model, int current_charge, std::string sensor_model, double speed = 0.0)
-      : position_{x, y}, orientation_{orientation}, battery_(battery_model, current_charge), speed_{speed} {
+  MobileRobot(double x, double y, double orientation, std::string model, std::string battery_model, int current_charge, std::string sensor_model, double speed = 0.0)
+      : position_{x, y}, orientation_{orientation}, speed_{speed}, battery_(battery_model, current_charge), model_{model} {
     sensors_ = std::make_unique<RWA2::Sensor>(sensor_model);
-  }
+  }//end of cotr.
 
   /**
    * @brief This virtual method is used to move the robot by a specified distance and angle.

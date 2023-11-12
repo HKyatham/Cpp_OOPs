@@ -28,23 +28,24 @@ class AquaticRobot: public MobileRobot
          * @param x x coordinate value of the position.
          * @param y y coordinate value of the position.
          * @param orientation orientation of the robot.
-         * @param has_fins flag to decide if the robot has fins.
-         * @param depth depth of the robot.
+         * @param model model of the robot.
          * @param battery_model battery model attached to the robot.
          * @param current_charge current charge of the battery.
          * @param sensor_model sensor model attached to the robot
-         * @param speed speed with which the robot moves.
+         * @param has_fins flag to decide if the robot has fins.
+         * @param depth depth of the robot.
          * @param is_diving flag to decide if the robot is diving.
+         * @param speed speed with which the robot moves.
          */
-        AquaticRobot(double x, double y, double orientation, bool has_fins,
+        AquaticRobot(double x, double y, double orientation, std::string model,
         std::string battery_model, int current_charge, std::string sensor_model, 
-        double depth = 0.0, bool is_diving = false, double speed = 0.0): 
-        MobileRobot(x, y, orientation, battery_model, current_charge, sensor_model, speed), 
+        bool has_fins, double depth = 0.0, bool is_diving = false, double speed = 0.0): 
+        MobileRobot(x, y, orientation, model, battery_model, current_charge, sensor_model, speed), 
         has_fins_{has_fins}, 
         depth_{depth},
         is_diving_{is_diving}{
 
-        }
+        }//end of cotr
 
         /**
          * @brief The overridden method to move the aquatic robot.
@@ -61,6 +62,6 @@ class AquaticRobot: public MobileRobot
         virtual void print_status() override;
         
 
-};
+};//class aquatic robot
 
-}
+}//namespace RWA2

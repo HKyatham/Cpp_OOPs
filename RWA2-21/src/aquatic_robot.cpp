@@ -14,16 +14,16 @@ void RWA2::AquaticRobot::dive(double depth){
     if(has_fins_){
         // Setting the depth based on the robot having fins.
         duration = depth*1000/2;
-    }
+    }//end of if for checking fins.
     else {
         // Setting the depth based on the robot having fins.
         duration = depth *1000;
-    }
+    }//end of else for checking fins.
     // Making the robot sleep for the calculated duration.
     std::this_thread::sleep_for(std::chrono::milliseconds(duration));
     // Setting depth to the new depth.
     depth_ = depth;
-}
+}// end of method dive.
 
 // Method to surface.
 void RWA2::AquaticRobot::surface(){
@@ -33,18 +33,18 @@ void RWA2::AquaticRobot::surface(){
     if(has_fins_){
         // Setting the depth based on the robot having fins.
         duration = depth_*1000/4;
-    }
+    }//end of if for checking fins.
     else {
         // Setting the depth based on the robot having fins.
         duration = depth_ *1000/2;
-    }
+    }//end of else for checking fins.
     // Making the robot sleep for the calculated distance.
     std::this_thread::sleep_for(std::chrono::milliseconds(duration));
     // Setting the depth to zero as Robot has surfaced.
     depth_ = 0;
     //Setting the flag to false.
     is_diving_ = false;
-}
+}//end of method surface.
 
 // Method to print the robot status.
 void RWA2::AquaticRobot::print_status(){
@@ -54,7 +54,7 @@ void RWA2::AquaticRobot::print_status(){
     std::cout
       << "depth_: " << depth_ << ", is_diving: " << std::boolalpha 
       << is_diving_ <<", has fins: "<< std::boolalpha << has_fins_ <<"\n";
-}
+}// end of method print status.
 
 // Method to move the robot to a specified distance and angle.
 void RWA2::AquaticRobot::move(double distance, double angle){
@@ -62,7 +62,7 @@ void RWA2::AquaticRobot::move(double distance, double angle){
     if(distance > 100){
         // Printing a user friendly method to let them know that they are asking too much with the current battery capacity.
         std::cout<<"Distance is greater than the amount robot can move with its max battery capacity.\n";
-    }
+    }// end of if.
     else{
         // Discharging the battery by the specified distance as 1% charge is consumed.
         battery_.discharge(distance);
@@ -72,26 +72,26 @@ void RWA2::AquaticRobot::move(double distance, double angle){
         if(!is_diving_){
             // Calling the dive method.
             dive(5);
-        }
+        }// end of if to check is diving.
         else {
             // Printing a user diving message that the robot is already diving.
             std::cout<< "The AquaticRobot "<<model_ <<" is already flying.\n";
-        }
+        }// end of else to check is diving.
         // Rotating the robot by the mentioned angle.1
         rotate(angle);
         // Checking if the robot is diving. as it doesn't make sense to surface when it's not diving.
         if(is_diving_){
             // LCalling the surface method.
             surface();
-        }
+        }// end of if to check is diving.
         else {
             // Pring a user friendly message that the robot has already surfaceed.
             std::cout<< "The AquaticRobot "<<model_ <<" is already on surface.\n";
-        }
+        }// end of else to check is diving.
         // Printing a message that the robot has reached the mentioned depth.
-        std::cout<< model_ <<"Reached an depth of "<<distance<<" meters and then surfaceed.\n";
+        std::cout<< model_ <<" reached an depth of "<<distance<<" meters and then surfaceed.\n";
         // Printing the status.
         print_status();
-    }
+    }//end of else.
 
-}
+}// end of method move.

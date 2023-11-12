@@ -28,23 +28,22 @@ class LeggedRobot: public MobileRobot
          * @param x x coordinate value of the position.
          * @param y y coordinate value of the position.
          * @param orientation orientation of the robot.
-         * @param height Height the robot can jump.
+         * @param model model of the robot.
          * @param battery_model battery model attached to the robot.
          * @param current_charge current charge of the battery.
          * @param sensor_model sensor model attached to the robot
+         * @param height Height the robot can jump.
          * @param leg_strength leg strength of the robot.
          * @param number_of_legs number of legs the robot has.
          * @param speed speed with which the robot is moving.
          */
-        LeggedRobot(double x, double y, double orientation, double height,
+        LeggedRobot(double x, double y, double orientation, std::string model,
         std::string battery_model, int current_charge,
-        std::string sensor_model,  int leg_strength, int number_of_legs = 2 , double speed = 0.0): 
+        std::string sensor_model, double height, int leg_strength, int number_of_legs = 2 , double speed = 0.0): 
+        MobileRobot(x, y, orientation, model, battery_model, current_charge, sensor_model, speed),
         height_{height},
         leg_strength_{leg_strength}, 
-        number_of_legs_{number_of_legs},
-        MobileRobot(x, y, orientation, battery_model, current_charge, sensor_model, speed){
-
-        }
+        number_of_legs_{number_of_legs}{}//end of cotr.
 
         /**
          * @brief The overridden method to move the Legged robot.
@@ -61,6 +60,6 @@ class LeggedRobot: public MobileRobot
         virtual void print_status() override;
         
 
-};
+};//class legged robot.
 
-}
+}//namespace RWA2

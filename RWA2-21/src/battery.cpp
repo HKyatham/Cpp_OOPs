@@ -10,7 +10,7 @@ void RWA2::Battery::stop_charging(){
     RWA2::Battery::is_charging_ = false;
     // Printing the battery status.
     std::cout << "Battery " << RWA2::Battery::model_ << " is fully charged.\n";
-}
+}//end of method stop_charging.
 
 // method to start charging.
 void RWA2::Battery::start_charging(){
@@ -24,32 +24,37 @@ void RWA2::Battery::start_charging(){
     if(RWA2::Battery::model_  == "Li-ion"){
         // setting the duration based on the model in milliseconds.
         duration = (100 - current_charge_)*500 ;
-    }
+    }//end of if consition.
     // Checking the model of the battery.
     else if(RWA2::Battery::model_  == "LiFePO4"){
         // Setting the duration based on the model in milliseconds.
         duration = (100 - current_charge_)*250;
-    }
+    }// end of else if.
+    else {
+        std::cout<<"Battery Model doesn't exist. Max duration is considered.";
+        // setting the duration based on the model in milliseconds.
+        duration = (100 - current_charge_)*500 ;
+    }// end of else.
     // Making the thread sleep for the duration.
     std::this_thread::sleep_for(std::chrono::milliseconds(duration));
     // Setting the current_charge_ to 100% as charing is complete.
     RWA2::Battery::current_charge_ = 100;
     // Calling the stop charing as the current_charge_ is set to 100%.
     RWA2::Battery::stop_charging();
-}
+}//end of start_charging method.
 
 void RWA2::Battery::discharge(double amount){
     // Checking if the amount is out of range.
     if(amount > 100 || amount < 0){
         std::cout << "Battery's discharge amount cannot be greater than 100 or less than 0.\n";
-    }
+    }//end of if.
     // Checking if the amount is greater than the current_charge_.
     if(amount > RWA2::Battery::current_charge_){
         std::cout << "Battery doesn't have enough charge.\n";
         RWA2::Battery::start_charging();
-    }
+    }//end of if.
     // If the current_charge_ is greater than the amount, decreasing the current_charge_ by amount value.
     else{
         RWA2::Battery::current_charge_ -= amount;
-    }
-}
+    }//end of else.
+}//end of method discharge.

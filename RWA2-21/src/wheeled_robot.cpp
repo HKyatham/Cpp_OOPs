@@ -12,10 +12,10 @@ void RWA2::WheeledRobot::accelerate(double amount){
         speed_ += amount;
         // Making the thread sleep for 0.5 sec.
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    }
+    }//end of while loop.
     // Printing the speed status of the robot.
-    std::cout<< model_ << "Has reached the desired speed of "<< desired_speed_ << "m/s.\n";
-}
+    std::cout<< model_ << " has reached the desired speed of "<< desired_speed_ << "m/s.\n";
+}//end of method accelerate.
 
 // Method to decelerate
 void RWA2::WheeledRobot::decelerate(double amount){
@@ -25,15 +25,15 @@ void RWA2::WheeledRobot::decelerate(double amount){
         speed_ -= amount;
         // Making the thread sleep for 0.5 sec.
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    }
+    }//end of while loop.
     // Printing the speed status of the robot.
-    std::cout<< model_ << "Has reached stopped.\n";
-}
+    std::cout<< model_ << " has reached stopped.\n";
+}//end of method decelerate.
 
 void RWA2::WheeledRobot::brake(){
     //setting the speed to zero as the robot has to stop moving.
     speed_ = 0.0;
-}
+}//end of method brake.
 
 // Method to print the robot status
 void RWA2::WheeledRobot::print_status(){
@@ -43,7 +43,7 @@ void RWA2::WheeledRobot::print_status(){
     std::cout
       << "number of wheels: " << number_of_wheels_ << ", wheel diameter: " 
       << wheel_diameter_ <<", desired speed: "<< desired_speed_ <<"\n";
-}
+}// end of method print status.
 
 // Method to move the robot to a specified distance and angle.
 void RWA2::WheeledRobot::move(double distance, double angle){
@@ -51,7 +51,7 @@ void RWA2::WheeledRobot::move(double distance, double angle){
     if(distance > 100){
         // Printing a user friendly method to let them know that they are asking too much with the current battery capacity.
         std::cout<<"Distance is greater than the amount robot can move with its max battery capacity.\n";
-    }
+    }//end of if.
     else{
         // Discharging the battery by the specified distance as 1% charge is consumed.
         battery_.discharge(distance);
@@ -67,9 +67,9 @@ void RWA2::WheeledRobot::move(double distance, double angle){
         // Calling brake to stop the robot.
         brake();
         // Printing a message that the robot has reached the mentioned distance.
-        std::cout<< model_ <<"Drove "<<distance<<" m\n";
+        std::cout<< model_ <<" drove "<<distance<<" m\n";
         // Printing the status.
         print_status();
-    }
+    }//end of else.
 
-}
+}//end of method move.

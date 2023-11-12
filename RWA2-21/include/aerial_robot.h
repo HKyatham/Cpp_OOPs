@@ -28,23 +28,24 @@ class AerialRobot: public MobileRobot
          * @param x x coordinate value of the position.
          * @param y y coordinate value of the position.
          * @param orientation orientation of the robot.
-         * @param has_wings flag to decide if the robot has wings.
-         * @param altitude altitude of the robot.
+         * @param model model of the robot.
          * @param battery_model battery model attached to the robot.
          * @param current_charge current charge of the battery.
          * @param sensor_model sensor model attached to the robot
-         * @param speed speed with which the robot moves.
+         * @param has_wings flag to decide if the robot has wings.
+         * @param altitude altitude of the robot.
          * @param is_flying flag to decide if the robot is flying.
+         * @param speed speed with which the robot moves.
          */
-        AerialRobot(double x, double y, double orientation, bool has_wings,
+        AerialRobot(double x, double y, double orientation, std::string model,
         std::string battery_model, int current_charge,
-        std::string sensor_model, double altitude = 0.0, bool is_flying = false, double speed = 0.0): 
-        MobileRobot(x, y, orientation, battery_model, current_charge, sensor_model, speed), 
+        std::string sensor_model, bool has_wings, double altitude = 0.0, bool is_flying = false, double speed = 0.0): 
+        MobileRobot(x, y, orientation, model, battery_model, current_charge, sensor_model, speed), 
         has_wings_{has_wings}, 
         altitude_{altitude},
         is_flying_{is_flying}{
 
-        }
+        }//end of cotr
 
         /**
          * @brief The overridden method to move the aerial robot.
@@ -61,6 +62,6 @@ class AerialRobot: public MobileRobot
         virtual void print_status() override;
         
 
-};
+};//class aerial robot
 
-}
+}//namespace RWA2

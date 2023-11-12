@@ -35,23 +35,22 @@ class WheeledRobot: public MobileRobot
          * @param x x coordinate value of the position.
          * @param y y coordinate value of the position.
          * @param orientation orientation of the robot.
-         * @param wheel_diameter Diameter of the wheels.
+         * @param model model of the robot.
          * @param battery_model battery model attached to the robot.
          * @param current_charge current charge of the battery.
          * @param sensor_model sensor model attached to the robot
+         * @param wheel_diameter Diameter of the wheels.
          * @param desired_speed speed desired of the robot.
          * @param number_of_wheels number of wheels the robot has.
          * @param speed speed with which the robot is moving.
          */
-        WheeledRobot(double x, double y, double orientation, double wheel_diameter,
-        std::string battery_model, int current_charge,
-        std::string sensor_model,  double desired_speed, int number_of_wheels = 2 , double speed = 0.0): 
+        WheeledRobot(double x, double y, double orientation, std::string model,
+        std::string battery_model, int current_charge, std::string sensor_model,
+        double wheel_diameter, double desired_speed, int number_of_wheels = 2 , double speed = 0.0): 
+        MobileRobot(x, y, orientation, model, battery_model, current_charge, sensor_model, speed),
         number_of_wheels_{number_of_wheels},
         wheel_diameter_{wheel_diameter}, 
-        desired_speed_{desired_speed},
-        MobileRobot(x, y, orientation, battery_model, current_charge, sensor_model, speed){
-
-        }
+        desired_speed_{desired_speed}{}//end of cotr.
 
         /**
          * @brief The overridden method to move the Wheeled robot.
@@ -68,6 +67,6 @@ class WheeledRobot: public MobileRobot
         virtual void print_status() override;
         
 
-};
+};//class wheeled robot.
 
-}
+}//namespace RWA2

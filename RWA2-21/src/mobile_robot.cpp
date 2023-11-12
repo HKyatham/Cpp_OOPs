@@ -5,7 +5,7 @@ void RWA2::MobileRobot::rotate(double angle) {
   std::cout << "Rotating by " << angle << " degrees\n";
   // Angle is added to orientation if it's positive and substracted if it's negative.
   RWA2::MobileRobot::orientation_ += angle;
-}
+}//end of method rotate.
 
 void RWA2::MobileRobot::print_status() {
   // A seperation line.
@@ -15,4 +15,4 @@ void RWA2::MobileRobot::print_status() {
       << "Position: (" << position_.first << ", "
       << position_.second << "), Orientation: " << orientation_
       << ", Speed: " << speed_ << "\n";
-}
+}//end of method print status
