@@ -9,7 +9,7 @@ void RWA2::Battery::stop_charging(){
     // Setting the is_charging_ flag to false.
     RWA2::Battery::is_charging_ = false;
     // Printing the battery status.
-    std::cout << "Battery " << RWA2::Battery::model_ << " is fully charged.\n";
+    std::cout << "Battery " << model_ << " is fully charged.\n";
 }//end of method stop_charging.
 
 // method to start charging.
@@ -17,7 +17,7 @@ void RWA2::Battery::start_charging(){
     // Setting the is_charging_ flag to true.
     RWA2::Battery::is_charging_ = true;
     // Printing the battery status.
-    std::cout << "Battery " << RWA2::Battery::model_ << " is charging.\n";
+    std::cout << "Battery " << model_ << " is charging.\n";
     // Defining a duration variable to store time to charge.
     int duration{0};
     // Checking the model of the battery.
@@ -50,7 +50,7 @@ void RWA2::Battery::discharge(double amount){
     }//end of if.
     // Checking if the amount is greater than the current_charge_.
     if(amount > RWA2::Battery::current_charge_){
-        std::cout << "Battery doesn't have enough charge.\n";
+        std::cout << "Battery " << model_<<" doesn't have enough charge.\n";
         RWA2::Battery::start_charging();
     }//end of if.
     // If the current_charge_ is greater than the amount, decreasing the current_charge_ by amount value.

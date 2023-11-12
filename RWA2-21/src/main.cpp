@@ -35,11 +35,11 @@ int main() {
   RWA2::MobileRobot& aquatic_robot_ref2{aquatic_robot2};
 
   RWA2::LeggedRobot legged_robot1(0.0, 0.0, 0.0, "Atlas",
-        "LiFePO4", 20, "OSDome", 0.1, 10);
+        "LiFePO4", 20, "OSDome", 1.0, 1);
   RWA2::MobileRobot& legged_robot_ref1{legged_robot1};
 
   RWA2::LeggedRobot legged_robot2(0.0, 0.0, 0.0, "Spot",
-        "Li-ion", 20, "OS1",  0.2, 5, 4);
+        "Li-ion", 20, "OS1",  2.0, 5, 4);
   RWA2::MobileRobot& legged_robot_ref2{legged_robot2};
 
   RWA2::WheeledRobot wheeled_robot1(0.0, 0.0, 0.0, "Turtlebot",

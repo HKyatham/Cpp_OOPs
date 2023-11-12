@@ -13,7 +13,7 @@ void RWA2::LeggedRobot::kick(){
 // Method to jump
 void RWA2::LeggedRobot::jump(double amount){
     // Jumps amount times leg strength.
-    height_ = leg_strength_ * amount;
+    height_ = leg_strength_ * amount/100;
     // Printing the jumped height of the robot.
     std::cout<< model_ <<" jumps at a height of "<< height_<<"cm above the ground.\n";
 }//end of method jump.
@@ -37,8 +37,7 @@ void RWA2::LeggedRobot::move(double distance, double angle){
     }//end of if.
     else{
         // Discharging the battery by the specified distance as 1% charge is consumed.
-
-        battery_.discharge(distance * leg_strength_ * 100 + leg_strength_);
+        battery_.discharge(distance * leg_strength_ + leg_strength_);
         // Getting the sensor data.
         sensors_->read_data(5);
         // Rotating the robot by the mentioned angle.1
